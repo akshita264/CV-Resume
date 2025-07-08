@@ -15,13 +15,14 @@
       color: #333;
     }
     .container {
-      max-width: 800px;
-      height: 1600px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
+  max-width: 800px;
+  width: 100%;
+  margin: auto;
+  background: #fff;
+  padding: 32px 32px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
     h1, h2 {
       color: #2c3e50;
     }
@@ -64,24 +65,49 @@
     ul {
       padding-left: 15px;
     }
-  }
-  @media (max-width: 768px) {
+    /* Large tablets and below */
+@media (max-width: 1024px) {
   .container {
-    padding: 0 12px;
-    /* height: px; */
+    padding: 24px 16px;
+    max-width: 95vw;
   }
 }
 
+/* Tablets and below */
+@media (max-width: 768px) {
+  .container {
+    padding: 16px 8px;
+    max-width: 100vw;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Phones */
 @media (max-width: 480px) {
+  body {
+    padding: 8px;
+  }
   .container {
-    padding: 0 8px;
+    padding: 8px 2px;
+    max-width: 100vw;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  .contact span {
+    font-size: 0.95rem;
   }
 }
-@media (max-width: 320px) {
-  .container {
-    padding: 0 4px;
   }
-}
+  
 
 
   </style>
